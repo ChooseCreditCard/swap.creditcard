@@ -4,280 +4,273 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Swap.Creditcard – Swapping Cards, Payment Sources & Smart Routing</title>
-  <meta name="description"
-        content="Swap.creditcard explains how card swapping works — changing cards on file, swapping funding sources, dynamic routing between cards, and how modern wallets decide which card to use." />
+  <title>Swap.Creditcard – Switching, Upgrading & Replacing Credit Cards</title>
+  <meta name="description" content="Understand how to swap credit cards: switching issuers, upgrading or downgrading products, balance transfers and how changes affect rewards, fees and credit profile." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://swap.creditcard/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Swap.Creditcard – Swapping Cards & Funding Sources" />
-  <meta property="og:description"
-        content="Learn how to safely swap cards, change payment sources, update stored details and how wallets and platforms choose the optimal card behind the scenes." />
+  <meta property="og:title" content="Swap.Creditcard – Switching & Replacing Credit Cards Explained" />
+  <meta property="og:description" content="Learn what happens when you swap credit cards: product changes, balance transfers, new-account approvals and the impact on rewards and fees." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://swap.creditcard/" />
-  <meta property="og:image" content="https://swap.creditcard/preview.png" />
+  <meta property="og:image" content="https://choose.creditcard/preview.png?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=og_image" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="./styles.css" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Swap.Creditcard – How to Switch & Upgrade Cards" />
+  <meta name="twitter:description" content="Independent explainer of swapping credit cards: when to change, what to compare, and how different options affect your overall setup." />
+  <meta name="twitter:image" content="https://choose.creditcard/preview.png?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=twitter_image" />
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-64FE63JQ3H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config','G-64FE63JQ3H');
+    gtag('config', 'G-64FE63JQ3H');
   </script>
+
+  <!-- Tailwind for utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Shared minisite styles -->
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-
 <body class="bg-slate-950 text-slate-100">
-
-  <!-- HEADER – unified CC -->
   <header class="site-header">
     <div class="nav-inner max-w-6xl">
       <div class="brand">
         <div class="cc-logo">CC</div>
         <div class="brand-text">
-          <span class="brand-title">Swap.creditcard</span>
-          <span class="brand-subtitle">Swap cards · Funding sources · Smart routing</span>
+          <div class="brand-title">Swap.Creditcard</div>
+          <div class="brand-subtitle">Switching & Replacing Credit Cards</div>
         </div>
       </div>
-
-      <nav class="nav-links">
-        <a href="https://fin.creditcard/">Collection</a>
-        <a href="https://tech.creditcard/">Tech</a>
-        <a href="https://choose.creditcard/">Choose</a>
+      <nav class="nav-links" aria-label="Page navigation">
+        <a href="#overview">Overview</a>
+        <a href="#mechanics">How It Works</a>
+        <a href="#compare">Compare</a>
       </nav>
     </div>
   </header>
 
   <main class="cc-page">
-
     <!-- Breadcrumb -->
-    <p class="cc-breadcrumb">Swap.creditcard · Swap cards · Funding sources · Routing</p>
-
-    <!-- HERO -->
-    <section class="hero">
-      <h1>How Card & Payment Source Swapping Works</h1>
-      <p class="hero-lead">
-        Swap.creditcard explains what happens when you replace a stored card, swap a funding source,
-        or let wallets and apps decide which card is used. Smart routing is becoming the new normal.
-      </p>
-      <a class="cta"
-         href="https://choose.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=swap_top">
-        Compare Flexible & Multi-Source Cards
+    <div class="cc-breadcrumb">
+      <a href="https://choose.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=breadcrumb">
+        Home
       </a>
-    </section>
+      &nbsp;›&nbsp;
+      Swap.Creditcard
+    </div>
 
-    <!-- What is swapping? -->
-    <section class="section">
-      <h2>What does “swap” mean in the card ecosystem?</h2>
-      <p class="small">
-        Swapping usually means replacing one payment source with another — either manually or automatically.
-        This can happen at merchants, in apps, inside wallets, or at an infrastructure level.
-      </p>
-      <ul class="list">
-        <li><strong>Manual card swap</strong> — updating your payment method with a merchant or service.</li>
-        <li><strong>Wallet source swap</strong> — choosing which card a wallet uses for tap/online payments.</li>
-        <li><strong>Dynamic routing swap</strong> — the system picks the best card or source automatically.</li>
-        <li><strong>Token swap</strong> — replacing expired or compromised card tokens without re-entering data.</li>
-      </ul>
-      <p class="small">Swapping affects spend, rewards, risk, limits and sometimes fees.</p>
-    </section>
-
-    <!-- How swapping works -->
-    <section class="section">
-      <h2>How card & source swapping works under the hood</h2>
-      <p class="small">
-        Whether you swap a card yourself or apps do it automatically, the same mechanics are involved:
-      </p>
-      <ul class="list">
-        <li><strong>1. Source evaluation</strong> – check available cards, funding sources, limits & costs.</li>
-        <li><strong>2. Eligibility & validity</strong> – expired cards or blocked sources are filtered out.</li>
-        <li><strong>3. Token or card update</strong> – card networks or wallets refresh tokens in the background.</li>
-        <li><strong>4. Merchant update</strong> – recurring payments may be updated via network-level “Account Updater”.</li>
-        <li><strong>5. Routing logic</strong> – if multiple sources exist, the system picks based on rules or ML models.</li>
-      </ul>
-      <p class="small">
-        These flows reduce friction: users get fewer declines, fewer expired-card issues, and better reward optimisation.
-      </p>
-    </section>
-
-    <!-- Types/models -->
-    <section class="section">
-      <h2>Types of swaps in modern payment systems</h2>
-      <p class="small">Common swap models include:</p>
-
-      <div class="cluster-grid">
-        <div class="cluster-card">
-          <h3>Swap stored card on file</h3>
-          <p class="small">
-            Updating card details with merchants, subscriptions or platforms. Can be manual or automatic via
-            network account updater services.
-          </p>
-        </div>
-
-        <div class="cluster-card">
-          <h3>Swap default wallet card</h3>
-          <p class="small">
-            Wallets allow one-tap switching between cards; smart wallets may auto-select based on rewards or FX.
-          </p>
-        </div>
-
-        <div class="cluster-card">
-          <h3>Swap funding source</h3>
-          <p class="small">
-            Some wallets allow funding transactions from bank accounts, cards, crypto wallets or balances.
-          </p>
-        </div>
-
-        <div class="cluster-card">
-          <h3>Swap routing path</h3>
-          <p class="small">
-            Advanced systems pick the optimal acquirer, rail or network path for each payment.
-          </p>
-        </div>
-
-        <div class="cluster-card">
-          <h3>Swap between virtual cards</h3>
-          <p class="small">
-            Merchants or users can rotate between virtual cards to control risk, spend or merchant grouping.
-          </p>
-        </div>
-
-        <div class="cluster-card">
-          <h3>Token & lifecycle swaps</h3>
-          <p class="small">
-            When a card expires or is reissued, networks push updated tokens automatically to merchants and apps.
-          </p>
-        </div>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>How to Swap Credit Cards Without Losing Control</h1>
+        <p class="hero-lead">
+          Swap.Creditcard explains what really happens when you switch from one card to another – upgrading, downgrading
+          or moving to a new issuer – and how to compare options before you swap.
+        </p>
+        <a class="cta"
+           href="https://choose.creditcard/compare/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=hero_cta">
+          Visit the Comparison hub
+        </a>
       </div>
     </section>
 
-    <!-- Fees / Risks / Limits -->
-    <section class="section">
-      <h2>Fees, risks &amp; limits when swapping cards or sources</h2>
-      <p class="small">
-        Swapping may improve approvals and rewards, but it also introduces new risks:
+    <!-- Content sections -->
+    <section id="overview" class="section">
+      <h2>What Does It Mean to “Swap” a Credit Card?</h2>
+      <p>
+        Swapping a credit card can mean several things: closing one card and opening another, requesting a product change
+        within the same bank, or shifting most of your spending from one card to a better fit. In every case you are
+        changing the mix of rewards, fees and protections in your wallet.
       </p>
+      <p>
+        Some swaps are driven by life changes – more travel, a new business, different income – while others are driven
+        by product changes on the bank side, such as revised fee structures or altered reward tables.
+      </p>
+    </section>
 
+    <section id="mechanics" class="section">
+      <h2>Common Ways People Swap Cards</h2>
+      <p>
+        There are three broad approaches to swapping:
+      </p>
+      <ul class="list">
+        <li>• <strong>Product change:</strong> moving to another card with the same issuer, often without a new application.</li>
+        <li>• <strong>New card, same ecosystem:</strong> switching to a different co-brand or reward structure while keeping a relationship with the bank.</li>
+        <li>• <strong>Full switch:</strong> closing or sidelining an old card and moving to a competitor’s product.</li>
+      </ul>
+      <p>
+        Each approach has different implications for credit checks, account age, reward currencies and annual fees.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>What to Check Before You Swap</h2>
+      <p>
+        Before you change cards, it helps to map out your current and future spend: which categories dominate, how often
+        you travel, and whether you typically revolve or pay in full. A card that looks attractive on paper may
+        underperform if its bonuses do not match your real-life pattern.
+      </p>
+      <p>
+        You should also review timing: unwanted annual fees, upcoming statement cycles, unredeemed rewards and any
+        promotional rates or welcome bonuses still in progress.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Balances, Transfers and Old Accounts</h2>
+      <p>
+        Swapping cards when you carry a balance raises additional questions. Balance transfer offers may temporarily
+        reduce interest, but can come with transfer fees and conditions. Closing long-held cards can also shorten your
+        average account age, which some credit scoring systems take into account.
+      </p>
+      <p>
+        In some cases, keeping an old no-fee card open while shifting primary use to a new product can preserve account
+        history without adding ongoing cost.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Rewards, Protections and the Hidden Trade-offs</h2>
+      <p>
+        Swapping into a “better” card is not only about headline earn rates. You also trade one set of perks and
+        protections for another: travel insurance, purchase protection, extended warranty, lounge access, partner
+        discounts and more.
+      </p>
+      <p>
+        A structured comparison – side-by-side – helps reveal which protections you may be losing when you move from one
+        card to the next, and whether the new rewards realistically offset any gaps.
+      </p>
+    </section>
+
+    <!-- Comparison block -->
+    <section id="compare" class="section">
+      <h2>Key Factors When Comparing Cards to Swap Into</h2>
       <div class="table-wrap">
         <table class="table">
           <thead>
-          <tr>
-            <th>Area</th>
-            <th>Impact of swapping</th>
-            <th>What to check</th>
-          </tr>
+            <tr>
+              <th>Factor</th>
+              <th>Questions to Ask</th>
+              <th>Why It Matters</th>
+            </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>Fees &amp; FX</td>
-            <td>Wrong default card may add FX fees or poor rates.</td>
-            <td>Ensure correct default card for travel; avoid DCC prompts.</td>
-          </tr>
-          <tr>
-            <td>Rewards</td>
-            <td>Different cards give very different earn-rates on categories.</td>
-            <td>Use smart wallets to pick the highest-earning card per transaction.</td>
-          </tr>
-          <tr>
-            <td>Liability</td>
-            <td>Some swaps may route spend to business vs personal cards accidentally.</td>
-            <td>Check which card is selected before high-value payments.</td>
-          </tr>
-          <tr>
-            <td>Merchant mapping</td>
-            <td>Certain merchants have excluded categories for rewards.</td>
-            <td>Verify MCC categorisation when swapping for bonus categories.</td>
-          </tr>
-          <tr>
-            <td>Security</td>
-            <td>More stored cards & sources = more attack surface.</td>
-            <td>Enable biometrics, per-merchant virtual cards, and wallet-level locks.</td>
-          </tr>
-          <tr>
-            <td>Lifecycle issues</td>
-            <td>Expired/reissued cards require token swaps to avoid declines.</td>
-            <td>Check if your issuer supports automatic account updater.</td>
-          </tr>
+            <tr>
+              <td>Annual &amp; Other Fees</td>
+              <td>Are you paying more, less, or just differently?</td>
+              <td>Frequent use can magnify even modest fee differences.</td>
+            </tr>
+            <tr>
+              <td>Rewards Structure</td>
+              <td>Do multipliers match your actual spend categories?</td>
+              <td>Determines whether the swap increases or dilutes value.</td>
+            </tr>
+            <tr>
+              <td>Protections &amp; Insurance</td>
+              <td>What cover do you gain or lose by switching?</td>
+              <td>Affects risk on travel, big purchases and disputes.</td>
+            </tr>
+            <tr>
+              <td>Credit Profile Impact</td>
+              <td>New inquiry, new account, closure of old card?</td>
+              <td>May influence credit scores in the short to medium term.</td>
+            </tr>
+            <tr>
+              <td>Ecosystem Fit</td>
+              <td>Does the card align with your bank, loyalty and travel setup?</td>
+              <td>Better alignment simplifies day-to-day management.</td>
+            </tr>
           </tbody>
         </table>
       </div>
+      <p class="small">
+        For structured side-by-side comparisons when planning a swap, visit
+        <a href="https://choose.creditcard/compare/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=comparison_section">
+          the Comparison hub on Choose.Creditcard
+        </a>.
+      </p>
     </section>
 
     <!-- Cluster links -->
     <section class="section">
-      <h2>The smart-routing & card-management cluster</h2>
-      <p class="small">
-        Swap.creditcard belongs to a group of domains explaining card routing, tokenization and card lifecycle mechanics:
-      </p>
-
+      <h2>Explore Related Minisites in The CreditCard Collection</h2>
       <div class="cluster-grid">
         <a class="cluster-card"
-           href="https://add.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=add">
+           href="https://partners.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=cluster_partners">
+          <h3>Partners.Creditcard</h3>
+          <p>How issuer and brand partnerships shape the cards you swap between.</p>
+        </a>
+        <a class="cluster-card"
+           href="https://frequent.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=cluster_frequent">
+          <h3>Frequent.Creditcard</h3>
+          <p>Strategies for frequent users of loyalty and rewards cards.</p>
+        </a>
+        <a class="cluster-card"
+           href="https://add.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=cluster_add">
           <h3>Add.Creditcard</h3>
-          <p class="small">Adding cards, users, tokens & linked accounts.</p>
+          <p>When it makes sense to add instead of swap a card.</p>
         </a>
-
         <a class="cluster-card"
-           href="https://virtualpay.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=virtualpay">
-          <h3>VirtualPay.Creditcard</h3>
-          <p class="small">Virtual cards & single-use card rotation.</p>
+           href="https://comparecard.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=cluster_comparecard">
+          <h3>CompareCard.Creditcard</h3>
+          <p>Focused view on card-to-card comparisons and switch candidates.</p>
         </a>
-
         <a class="cluster-card"
-           href="https://meshpay.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=meshpay">
-          <h3>MeshPay.Creditcard</h3>
-          <p class="small">Multi-rail routing and network-of-networks logic.</p>
-        </a>
-
-        <a class="cluster-card"
-           href="https://chainpay.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=chainpay">
-          <h3>ChainPay.Creditcard</h3>
-          <p class="small">Card → network → acquirer → issuer value flows.</p>
-        </a>
-
-        <a class="cluster-card"
-           href="https://tech.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=tech">
-          <h3>Tech.Creditcard</h3>
-          <p class="small">Rails, tokenization, updater services & wallet tech.</p>
-        </a>
-
-        <a class="cluster-card"
-           href="https://fin.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=fin">
-          <h3>Fin.Creditcard</h3>
-          <p class="small">Overview of The CreditCard Collection.</p>
+           href="https://reviews.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=cluster_reviews">
+          <h3>Reviews.Creditcard</h3>
+          <p>Independent-style review content before you commit to a swap.</p>
         </a>
       </div>
     </section>
 
-    <!-- CTA bottom -->
+    <!-- Collection section -->
     <section class="section">
-      <h2>Find cards that swap smoothly across apps & wallets</h2>
+      <h2>Part of The CreditCard Collection</h2>
       <p class="small">
-        Swap.creditcard explains the mechanics behind swapping cards and payment sources. To compare real
-        cards with good wallet compatibility, token support and reliable approval rates, use the independent
-        comparison engine on Choose.Creditcard:
+        Swap.Creditcard is one spoke in <strong>The CreditCard Collection</strong> — a network of focused minisites
+        operated by ronarn AS. Each domain covers one concept in the card ecosystem and then points to neutral
+        comparison tools.
       </p>
-      <a class="cta"
-         href="https://choose.creditcard/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=swap_bottom">
-        Open Card Comparison on Choose.Creditcard
-      </a>
+      <p class="small">
+        This page concentrates on swapping, switching and replacing credit cards. It does not give personalised
+        financial advice or recommend specific products; instead it summarises typical mechanics described in issuer and
+        scheme documentation.
+      </p>
+
+      <!-- Comparison hub snippet -->
+      <div class="hub-link">
+        <a href="https://choose.creditcard/compare/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=minisite_to_hub"
+           class="text-sm text-slate-600 hover:text-slate-900">
+          Learn more at the Comparison hub
+        </a>
+      </div>
     </section>
 
+    <!-- Bottom CTA -->
+    <section class="section">
+      <h2>Ready to Plan Your Next Card Swap?</h2>
+      <p class="small">
+        Use Swap.Creditcard to understand the moving parts behind switching — then go to the Comparison hub to line up
+        candidates and decide which card genuinely fits better than the one you are replacing.
+      </p>
+      <a class="cta"
+         href="https://choose.creditcard/compare/?utm_source=swap.creditcard&utm_medium=referral&utm_campaign=bottom_cta">
+        Go to the Comparison hub
+      </a>
+    </section>
   </main>
 
-  <!-- MINI FOOTER -->
   <footer class="mini-footer">
-    <p class="mini-footer-main">
-      © 2025 The CreditCard Collection — ronarn AS
-    </p>
+    <p class="mini-footer-main">© 2025 The CreditCard Collection — ronarn AS</p>
     <p class="mini-footer-contact">
       Contact: <a href="mailto:support@cc.creditcard">support@cc.creditcard</a>
     </p>
   </footer>
-
 </body>
 </html>
